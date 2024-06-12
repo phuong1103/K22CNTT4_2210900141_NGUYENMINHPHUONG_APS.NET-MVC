@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|d:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\nmplesson6\\nmplesson6\\views\\nmpsong\\nmpcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|solutionrelative:nmplesson6\\views\\nmpsong\\nmpcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|d:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\nmplesson6\\nmplesson6\\views\\nmpsong\\nmpindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|solutionrelative:nmplesson6\\views\\nmpsong\\nmpindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|d:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\nmplesson6\\nmplesson6\\models\\nmpsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|solutionrelative:nmplesson6\\models\\nmpsong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|d:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\nmplesson6\\nmplesson6\\controllers\\nmpsongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|solutionrelative:nmplesson6\\controllers\\nmpsongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|d:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\nmplesson6\\nmplesson6\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{46C7B2AB-14FD-41CB-B003-2D0C73C91857}|NmpLesson6\\NmpLesson6.csproj|solutionrelative:nmplesson6\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NmpCreate.cshtml",
+              "DocumentMoniker": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Views\\NmpSong\\NmpCreate.cshtml",
+              "RelativeDocumentMoniker": "NmpLesson6\\Views\\NmpSong\\NmpCreate.cshtml",
+              "ToolTip": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Views\\NmpSong\\NmpCreate.cshtml",
+              "RelativeToolTip": "NmpLesson6\\Views\\NmpSong\\NmpCreate.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-04T17:22:59.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NmpSong.cs",
+              "DocumentMoniker": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Models\\NmpSong.cs",
+              "RelativeDocumentMoniker": "NmpLesson6\\Models\\NmpSong.cs",
+              "ToolTip": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Models\\NmpSong.cs",
+              "RelativeToolTip": "NmpLesson6\\Models\\NmpSong.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAmwB0AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T16:46:47.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NmpIndex.cshtml",
+              "DocumentMoniker": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Views\\NmpSong\\NmpIndex.cshtml",
+              "RelativeDocumentMoniker": "NmpLesson6\\Views\\NmpSong\\NmpIndex.cshtml",
+              "ToolTip": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Views\\NmpSong\\NmpIndex.cshtml",
+              "RelativeToolTip": "NmpLesson6\\Views\\NmpSong\\NmpIndex.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-04T17:16:33.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NmpSongController.cs",
+              "DocumentMoniker": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Controllers\\NmpSongController.cs",
+              "RelativeDocumentMoniker": "NmpLesson6\\Controllers\\NmpSongController.cs",
+              "ToolTip": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Controllers\\NmpSongController.cs",
+              "RelativeToolTip": "NmpLesson6\\Controllers\\NmpSongController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T16:55:17.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NmpLesson6\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\NmpLesson6\\NmpLesson6\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NmpLesson6\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-04T16:42:42.753Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

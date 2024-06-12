@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession02\\NmpLession03Demo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF850DA-09F2-46A6-B667-162D1FFC6827}|NmpLession03Demo\\NmpLession03Demo.csproj|c:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\lession02\\nmplession03demo\\nmplession03demo\\controllers\\nmphomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF850DA-09F2-46A6-B667-162D1FFC6827}|NmpLession03Demo\\NmpLession03Demo.csproj|solutionrelative:nmplession03demo\\controllers\\nmphomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF850DA-09F2-46A6-B667-162D1FFC6827}|NmpLession03Demo\\NmpLession03Demo.csproj|c:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\lession02\\nmplession03demo\\nmplession03demo\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF850DA-09F2-46A6-B667-162D1FFC6827}|NmpLession03Demo\\NmpLession03Demo.csproj|solutionrelative:nmplession03demo\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession02\\NmpLession03Demo\\NmpLession03Demo\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "NmpLession03Demo\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession02\\NmpLession03Demo\\NmpLession03Demo\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "NmpLession03Demo\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T16:18:06.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NMPHomeController.cs",
+              "DocumentMoniker": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession02\\NmpLession03Demo\\NmpLession03Demo\\Controllers\\NMPHomeController.cs",
+              "RelativeDocumentMoniker": "NmpLession03Demo\\Controllers\\NMPHomeController.cs",
+              "ToolTip": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession02\\NmpLession03Demo\\NmpLession03Demo\\Controllers\\NMPHomeController.cs",
+              "RelativeToolTip": "NmpLession03Demo\\Controllers\\NMPHomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T16:16:07.475Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

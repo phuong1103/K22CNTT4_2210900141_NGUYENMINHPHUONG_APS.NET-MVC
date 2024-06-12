@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "NMPCustomerDetail";
+}
+
+<h2>Thông tin khách hàng</h2>
+<div class=" alert alert-danger">
+    <p>Mã số: @ViewBag.customer.CustomerId</p>
+    <p>Họ và tên : @ViewBag.customer.FirstName @ViewBag.customer.LastName</p>
+    <p>Địa chỉ :@ViewBag.customer.Address</p>
+    <p>Năm sinh : @ViewBag.customer.YearOfBirth</p>
+</div>
