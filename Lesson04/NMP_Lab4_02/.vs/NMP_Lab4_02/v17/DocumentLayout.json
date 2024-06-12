@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession05\\NMP_Lab4_02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDE3814-FBEB-4EFB-97EB-D05BB79E029D}|NMP_Lab4_02\\NMP_Lab4_02.csproj|c:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\lession05\\nmp_lab4_02\\nmp_lab4_02\\models\\nmpcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEDE3814-FBEB-4EFB-97EB-D05BB79E029D}|NMP_Lab4_02\\NMP_Lab4_02.csproj|solutionrelative:nmp_lab4_02\\models\\nmpcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDE3814-FBEB-4EFB-97EB-D05BB79E029D}|NMP_Lab4_02\\NMP_Lab4_02.csproj|c:\\k22cntt4_aps.net mvc_2210900141\\k22cntt4_2210900141_nguyenminhphuong_aps.net-mvc\\lession05\\nmp_lab4_02\\nmp_lab4_02\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDE3814-FBEB-4EFB-97EB-D05BB79E029D}|NMP_Lab4_02\\NMP_Lab4_02.csproj|solutionrelative:nmp_lab4_02\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NMPCustomer.cs",
+              "DocumentMoniker": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession05\\NMP_Lab4_02\\NMP_Lab4_02\\Models\\NMPCustomer.cs",
+              "RelativeDocumentMoniker": "NMP_Lab4_02\\Models\\NMPCustomer.cs",
+              "ToolTip": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession05\\NMP_Lab4_02\\NMP_Lab4_02\\Models\\NMPCustomer.cs",
+              "RelativeToolTip": "NMP_Lab4_02\\Models\\NMPCustomer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T08:21:22.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession05\\NMP_Lab4_02\\NMP_Lab4_02\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NMP_Lab4_02\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\K22CNTT4_APS.NET MVC_2210900141\\K22CNTT4_2210900141_NGUYENMINHPHUONG_APS.NET-MVC\\Lession05\\NMP_Lab4_02\\NMP_Lab4_02\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NMP_Lab4_02\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T08:19:00.795Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
