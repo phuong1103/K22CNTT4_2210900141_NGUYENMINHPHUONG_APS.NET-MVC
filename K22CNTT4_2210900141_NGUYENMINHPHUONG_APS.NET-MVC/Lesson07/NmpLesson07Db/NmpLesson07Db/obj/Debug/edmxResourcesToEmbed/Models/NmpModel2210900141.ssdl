@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NmpK22CNTT4Lesson07DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NmpKhoa">
+    <Key>
+      <PropertyRef Name="NmpMaKhoa" />
+    </Key>
+    <Property Name="NmpMaKhoa" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NmpTenKhoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NmpTrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="NmpSinhVien">
+    <Key>
+      <PropertyRef Name="NmpMaSV" />
+    </Key>
+    <Property Name="NmpMaSV" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NmpHoSV" Type="nvarchar" MaxLength="50" />
+    <Property Name="NmpTenSV" Type="nvarchar" MaxLength="50" />
+    <Property Name="NmpPhai" Type="bit" />
+    <Property Name="NmpEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="NmpPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="NmpMaKhoa" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_NmpSinhVien_NmpKhoa1">
+    <End Role="NmpKhoa" Type="Self.NmpKhoa" Multiplicity="0..1" />
+    <End Role="NmpSinhVien" Type="Self.NmpSinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NmpKhoa">
+        <PropertyRef Name="NmpMaKhoa" />
+      </Principal>
+      <Dependent Role="NmpSinhVien">
+        <PropertyRef Name="NmpMaKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NmpK22CNTT4Lesson07DbModelStoreContainer">
+    <EntitySet Name="NmpKhoa" EntityType="Self.NmpKhoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NmpSinhVien" EntityType="Self.NmpSinhVien" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NmpSinhVien_NmpKhoa1" Association="Self.FK_NmpSinhVien_NmpKhoa1">
+      <End Role="NmpKhoa" EntitySet="NmpKhoa" />
+      <End Role="NmpSinhVien" EntitySet="NmpSinhVien" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

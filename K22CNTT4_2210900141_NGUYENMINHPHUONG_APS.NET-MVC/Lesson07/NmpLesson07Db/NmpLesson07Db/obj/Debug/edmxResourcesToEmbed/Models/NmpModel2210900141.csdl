@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NmpK22CNTT4Lesson07DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NmpKhoa">
+    <Key>
+      <PropertyRef Name="NmpMaKhoa" />
+    </Key>
+    <Property Name="NmpMaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NmpTenKhoa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpTrangThai" Type="Boolean" />
+    <NavigationProperty Name="NmpSinhViens" Relationship="NmpK22CNTT4Lesson07DbModel.FK_NmpSinhVien_NmpKhoa" FromRole="NmpKhoa" ToRole="NmpSinhVien" />
+  </EntityType>
+  <EntityType Name="NmpSinhVien">
+    <Key>
+      <PropertyRef Name="NmpMaSV" />
+    </Key>
+    <Property Name="NmpMaSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NmpHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpPhai" Type="Boolean" />
+    <Property Name="NmpEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpMaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="NmpKhoa" Relationship="NmpK22CNTT4Lesson07DbModel.FK_NmpSinhVien_NmpKhoa" FromRole="NmpSinhVien" ToRole="NmpKhoa" />
+  </EntityType>
+  <EntityContainer Name="NmpK22CNTT4_Lesson07DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NmpKhoas" EntityType="Self.NmpKhoa" />
+    <EntitySet Name="NmpSinhViens" EntityType="Self.NmpSinhVien" />
+    <AssociationSet Name="FK_NmpSinhVien_NmpKhoa" Association="NmpK22CNTT4Lesson07DbModel.FK_NmpSinhVien_NmpKhoa">
+      <End Role="NmpKhoa" EntitySet="NmpKhoas" />
+      <End Role="NmpSinhVien" EntitySet="NmpSinhViens" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_NmpSinhVien_NmpKhoa">
+    <End Type="NmpK22CNTT4Lesson07DbModel.NmpKhoa" Role="NmpKhoa" Multiplicity="0..1" />
+    <End Type="NmpK22CNTT4Lesson07DbModel.NmpSinhVien" Role="NmpSinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NmpKhoa">
+        <PropertyRef Name="NmpMaKhoa" />
+      </Principal>
+      <Dependent Role="NmpSinhVien">
+        <PropertyRef Name="NmpMaKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

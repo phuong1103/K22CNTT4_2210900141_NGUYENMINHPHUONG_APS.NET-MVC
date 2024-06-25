@@ -1,0 +1,39 @@
+﻿@model IEnumerable<NmpLesson07Db.Models.NmpKhoa>
+
+@{
+    ViewBag.Title = "NmpIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("NMP:Create New", "NmpCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpTenKhoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpTrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpTenKhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpTrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("NMP:Edit", "NmpEdit", new { id=item.NmpMaKhoa.Trim() }) |
+            @Html.ActionLink("NMP:Details", "NmpDetails", new { id=item.NmpMaKhoa.Trim() }) |
+            @Html.ActionLink("NMP:Delete", "NmpDelete", new { id=item.NmpMaKhoa.Trim() })
+        </td>
+    </tr>
+}
+
+</table>
