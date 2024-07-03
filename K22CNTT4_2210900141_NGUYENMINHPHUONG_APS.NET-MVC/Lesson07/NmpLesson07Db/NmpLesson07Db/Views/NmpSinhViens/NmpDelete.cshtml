@@ -1,0 +1,72 @@
+﻿@model NmpLesson07Db.Models.NmpSinhVien
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NmpSinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpHoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpTenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpTenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpPhai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpPhai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpKhoa.NmpTenKhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpKhoa.NmpTenKhoa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "NmpIndex")
+        </div>
+    }
+</div>

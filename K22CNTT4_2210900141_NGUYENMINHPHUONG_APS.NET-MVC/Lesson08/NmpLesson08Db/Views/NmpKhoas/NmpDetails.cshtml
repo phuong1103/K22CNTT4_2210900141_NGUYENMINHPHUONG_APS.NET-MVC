@@ -1,0 +1,26 @@
+﻿@model NmpLesson08Db.Models.Khoa
+
+@{
+    ViewBag.Title = "NmpDetails";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Khoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("NMP:Edit", "NmpEdit", new { id = Model.MaKH }) |
+    @Html.ActionLink("Back to List", "NmpIndex")
+</p>

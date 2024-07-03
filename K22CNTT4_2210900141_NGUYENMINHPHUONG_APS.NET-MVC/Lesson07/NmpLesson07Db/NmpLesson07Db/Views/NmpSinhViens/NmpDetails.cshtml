@@ -1,0 +1,66 @@
+﻿@model NmpLesson07Db.Models.NmpSinhVien
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NmpSinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpHoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpTenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpTenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpPhai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpPhai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpKhoa.NmpTenKhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpKhoa.NmpTenKhoa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "NmpEdit", new { id = Model.NmpMaSV }) |
+    @Html.ActionLink("Back to List", "NmpIndex")
+</p>

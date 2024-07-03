@@ -52,7 +52,7 @@ namespace NmpLesson07Db.Controllers
             {
                 db.NmpKhoas.Add(nmpKhoa);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("NmpIndex");
             }
 
             return View(nmpKhoa);
@@ -84,7 +84,7 @@ namespace NmpLesson07Db.Controllers
             {
                 db.Entry(nmpKhoa).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("NmpIndex");
             }
             return View(nmpKhoa);
         }

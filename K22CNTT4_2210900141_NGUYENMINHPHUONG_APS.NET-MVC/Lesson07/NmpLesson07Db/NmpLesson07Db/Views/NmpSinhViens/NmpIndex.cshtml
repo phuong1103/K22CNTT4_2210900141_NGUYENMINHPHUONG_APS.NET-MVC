@@ -1,0 +1,63 @@
+﻿@model IEnumerable<NmpLesson07Db.Models.NmpSinhVien>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "NmpCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpHoSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpTenSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpPhai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpKhoa.NmpTenKhoa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpHoSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpTenSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpPhai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpKhoa.NmpTenKhoa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "NmpEdit", new { id=item.NmpMaSV.Trim() }) |
+            @Html.ActionLink("Details", "NmpDetails", new { id=item.NmpMaSV.Trim() }) |
+            @Html.ActionLink("Delete", "NmpDelete", new { id=item.NmpMaSV.Trim() })
+        </td>
+    </tr>
+}
+
+</table>
