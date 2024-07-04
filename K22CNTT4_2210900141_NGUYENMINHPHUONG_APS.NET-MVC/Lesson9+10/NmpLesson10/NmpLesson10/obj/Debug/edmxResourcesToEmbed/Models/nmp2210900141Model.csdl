@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NmpK22cntt4Lesson10Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NmpAccount">
+    <Key>
+      <PropertyRef Name="NmpID" />
+    </Key>
+    <Property Name="NmpID" Type="Int32" Nullable="false" />
+    <Property Name="NmpUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="NmpK22cntt4Lesson10Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NmpAccount" EntityType="Self.NmpAccount" />
+  </EntityContainer>
+</Schema>

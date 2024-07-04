@@ -1,0 +1,64 @@
+﻿@model IEnumerable<NmpLesson10.Models.NmpAccount>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NmpID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NmpID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NmpID })
+        </td>
+    </tr>
+}
+
+</table>

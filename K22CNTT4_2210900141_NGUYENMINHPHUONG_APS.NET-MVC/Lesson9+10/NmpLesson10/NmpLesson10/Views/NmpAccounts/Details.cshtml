@@ -1,0 +1,67 @@
+﻿@model NmpLesson10.Models.NmpAccount
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NmpAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpActive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NmpID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
