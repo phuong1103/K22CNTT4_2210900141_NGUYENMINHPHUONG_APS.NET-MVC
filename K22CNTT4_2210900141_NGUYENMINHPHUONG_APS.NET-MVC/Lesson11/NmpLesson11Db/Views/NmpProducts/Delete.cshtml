@@ -1,0 +1,65 @@
+﻿@model NmpLesson11Db.Models.NmpProduct
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NmpProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpCategory.NmpCateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpCategory.NmpCateName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "NmpIndex")
+        </div>
+    }
+</div>

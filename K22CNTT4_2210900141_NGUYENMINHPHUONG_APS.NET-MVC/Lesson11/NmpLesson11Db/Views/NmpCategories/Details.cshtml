@@ -1,0 +1,35 @@
+﻿@model NmpLesson11Db.Models.NmpCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NmpCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpCateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpCateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NmpID }) |
+    @Html.ActionLink("Back to List", "NmpIndex")
+</p>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<NmpLesson11Db.Models.NmpCategory>
+
+@{
+    ViewBag.Title = "Danh mục sản phẩm";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Danh mục sản phẩm</h2>
+
+<p>
+    <a href="/NmpCategories/Create" class="btn btn-primary my-3"> Thêm Mới </a>
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpCateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpStatus)
+        </th>
+        <th>Chức năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpCateName)
+        </td>
+        <td>
+           @* @Html.DisplayFor(modelItem => item.NmpStatus)*@
+
+            @if (item.NmpStatus == true)
+            {
+                <span style="color:green"> Hoạt động</span>
+            }
+            else
+            {
+                <span style="color:red"> Không hoạt động</span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.NmpID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.NmpID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.NmpID })
+        </td>
+    </tr>
+}
+
+</table>

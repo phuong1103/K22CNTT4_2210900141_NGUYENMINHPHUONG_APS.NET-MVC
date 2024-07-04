@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Nmpk22cntt4Lesson11Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NmpCategory">
+    <Key>
+      <PropertyRef Name="NmpID" />
+    </Key>
+    <Property Name="NmpID" Type="int" Nullable="false" />
+    <Property Name="NmpCateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NmpStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="NmpProduct">
+    <Key>
+      <PropertyRef Name="NmpId2210900141" />
+    </Key>
+    <Property Name="NmpId2210900141" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NmpProName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NmpQty" Type="int" />
+    <Property Name="NmpPrice" Type="float" />
+    <Property Name="NmpCateId" Type="int" />
+    <Property Name="NmpActive" Type="bit" />
+  </EntityType>
+  <Association Name="FK_NmpProduct_NmpCategory">
+    <End Role="NmpCategory" Type="Self.NmpCategory" Multiplicity="0..1" />
+    <End Role="NmpProduct" Type="Self.NmpProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NmpCategory">
+        <PropertyRef Name="NmpID" />
+      </Principal>
+      <Dependent Role="NmpProduct">
+        <PropertyRef Name="NmpCateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Nmpk22cntt4Lesson11ModelStoreContainer">
+    <EntitySet Name="NmpCategory" EntityType="Self.NmpCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NmpProduct" EntityType="Self.NmpProduct" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NmpProduct_NmpCategory" Association="Self.FK_NmpProduct_NmpCategory">
+      <End Role="NmpCategory" EntitySet="NmpCategory" />
+      <End Role="NmpProduct" EntitySet="NmpProduct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

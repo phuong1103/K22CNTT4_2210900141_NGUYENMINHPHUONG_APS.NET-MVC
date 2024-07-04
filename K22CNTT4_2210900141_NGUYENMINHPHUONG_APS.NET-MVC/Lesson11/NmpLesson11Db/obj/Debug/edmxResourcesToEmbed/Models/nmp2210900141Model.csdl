@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Nmpk22cntt4Lesson11Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NmpCategory">
+    <Key>
+      <PropertyRef Name="NmpID" />
+    </Key>
+    <Property Name="NmpID" Type="Int32" Nullable="false" />
+    <Property Name="NmpCateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpStatus" Type="Boolean" />
+    <NavigationProperty Name="NmpProduct" Relationship="Self.FK_NmpProduct_NmpCategory" FromRole="NmpCategory" ToRole="NmpProduct" />
+  </EntityType>
+  <EntityType Name="NmpProduct">
+    <Key>
+      <PropertyRef Name="NmpId2210900141" />
+    </Key>
+    <Property Name="NmpId2210900141" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NmpProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NmpQty" Type="Int32" />
+    <Property Name="NmpPrice" Type="Double" />
+    <Property Name="NmpCateId" Type="Int32" />
+    <Property Name="NmpActive" Type="Boolean" />
+    <NavigationProperty Name="NmpCategory" Relationship="Self.FK_NmpProduct_NmpCategory" FromRole="NmpProduct" ToRole="NmpCategory" />
+  </EntityType>
+  <Association Name="FK_NmpProduct_NmpCategory">
+    <End Role="NmpCategory" Type="Self.NmpCategory" Multiplicity="0..1" />
+    <End Role="NmpProduct" Type="Self.NmpProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NmpCategory">
+        <PropertyRef Name="NmpID" />
+      </Principal>
+      <Dependent Role="NmpProduct">
+        <PropertyRef Name="NmpCateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Nmpk22cntt4Lesson11Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NmpCategory" EntityType="Self.NmpCategory" />
+    <EntitySet Name="NmpProduct" EntityType="Self.NmpProduct" />
+    <AssociationSet Name="FK_NmpProduct_NmpCategory" Association="Self.FK_NmpProduct_NmpCategory">
+      <End Role="NmpCategory" EntitySet="NmpCategory" />
+      <End Role="NmpProduct" EntitySet="NmpProduct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

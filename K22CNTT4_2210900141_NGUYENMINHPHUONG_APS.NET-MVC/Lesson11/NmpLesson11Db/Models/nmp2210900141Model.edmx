@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Nmpk22cntt4Lesson11Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NmpCategory">
+          <Key>
+            <PropertyRef Name="NmpID" />
+          </Key>
+          <Property Name="NmpID" Type="int" Nullable="false" />
+          <Property Name="NmpCateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NmpStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="NmpProduct">
+          <Key>
+            <PropertyRef Name="NmpId2210900141" />
+          </Key>
+          <Property Name="NmpId2210900141" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NmpProName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NmpQty" Type="int" />
+          <Property Name="NmpPrice" Type="float" />
+          <Property Name="NmpCateId" Type="int" />
+          <Property Name="NmpActive" Type="bit" />
+        </EntityType>
+        <Association Name="FK_NmpProduct_NmpCategory">
+          <End Role="NmpCategory" Type="Self.NmpCategory" Multiplicity="0..1" />
+          <End Role="NmpProduct" Type="Self.NmpProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NmpCategory">
+              <PropertyRef Name="NmpID" />
+            </Principal>
+            <Dependent Role="NmpProduct">
+              <PropertyRef Name="NmpCateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Nmpk22cntt4Lesson11ModelStoreContainer">
+          <EntitySet Name="NmpCategory" EntityType="Self.NmpCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NmpProduct" EntityType="Self.NmpProduct" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NmpProduct_NmpCategory" Association="Self.FK_NmpProduct_NmpCategory">
+            <End Role="NmpCategory" EntitySet="NmpCategory" />
+            <End Role="NmpProduct" EntitySet="NmpProduct" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Nmpk22cntt4Lesson11Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NmpCategory">
+          <Key>
+            <PropertyRef Name="NmpID" />
+          </Key>
+          <Property Name="NmpID" Type="Int32" Nullable="false" />
+          <Property Name="NmpCateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NmpStatus" Type="Boolean" />
+          <NavigationProperty Name="NmpProduct" Relationship="Self.FK_NmpProduct_NmpCategory" FromRole="NmpCategory" ToRole="NmpProduct" />
+        </EntityType>
+        <EntityType Name="NmpProduct">
+          <Key>
+            <PropertyRef Name="NmpId2210900141" />
+          </Key>
+          <Property Name="NmpId2210900141" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NmpProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NmpQty" Type="Int32" />
+          <Property Name="NmpPrice" Type="Double" />
+          <Property Name="NmpCateId" Type="Int32" />
+          <Property Name="NmpActive" Type="Boolean" />
+          <NavigationProperty Name="NmpCategory" Relationship="Self.FK_NmpProduct_NmpCategory" FromRole="NmpProduct" ToRole="NmpCategory" />
+        </EntityType>
+        <Association Name="FK_NmpProduct_NmpCategory">
+          <End Role="NmpCategory" Type="Self.NmpCategory" Multiplicity="0..1" />
+          <End Role="NmpProduct" Type="Self.NmpProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NmpCategory">
+              <PropertyRef Name="NmpID" />
+            </Principal>
+            <Dependent Role="NmpProduct">
+              <PropertyRef Name="NmpCateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Nmpk22cntt4Lesson11Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NmpCategory" EntityType="Self.NmpCategory" />
+          <EntitySet Name="NmpProduct" EntityType="Self.NmpProduct" />
+          <AssociationSet Name="FK_NmpProduct_NmpCategory" Association="Self.FK_NmpProduct_NmpCategory">
+            <End Role="NmpCategory" EntitySet="NmpCategory" />
+            <End Role="NmpProduct" EntitySet="NmpProduct" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Nmpk22cntt4Lesson11ModelStoreContainer" CdmEntityContainer="Nmpk22cntt4Lesson11Entities">
+          <EntitySetMapping Name="NmpCategory">
+            <EntityTypeMapping TypeName="Nmpk22cntt4Lesson11Model.NmpCategory">
+              <MappingFragment StoreEntitySet="NmpCategory">
+                <ScalarProperty Name="NmpID" ColumnName="NmpID" />
+                <ScalarProperty Name="NmpCateName" ColumnName="NmpCateName" />
+                <ScalarProperty Name="NmpStatus" ColumnName="NmpStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NmpProduct">
+            <EntityTypeMapping TypeName="Nmpk22cntt4Lesson11Model.NmpProduct">
+              <MappingFragment StoreEntitySet="NmpProduct">
+                <ScalarProperty Name="NmpId2210900141" ColumnName="NmpId2210900141" />
+                <ScalarProperty Name="NmpProName" ColumnName="NmpProName" />
+                <ScalarProperty Name="NmpQty" ColumnName="NmpQty" />
+                <ScalarProperty Name="NmpPrice" ColumnName="NmpPrice" />
+                <ScalarProperty Name="NmpCateId" ColumnName="NmpCateId" />
+                <ScalarProperty Name="NmpActive" ColumnName="NmpActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
