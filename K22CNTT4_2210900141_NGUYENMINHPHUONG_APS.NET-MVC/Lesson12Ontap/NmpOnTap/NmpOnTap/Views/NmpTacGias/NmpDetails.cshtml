@@ -1,0 +1,27 @@
+﻿@model NmpOnTap.Models.NmpTacGia
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NmpTacGia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_TenTG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_TenTG)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "NmpEdit", new { id = Model.Nmp_MaTG }) |
+    @Html.ActionLink("Back to List", "NmpIndex")
+</p>

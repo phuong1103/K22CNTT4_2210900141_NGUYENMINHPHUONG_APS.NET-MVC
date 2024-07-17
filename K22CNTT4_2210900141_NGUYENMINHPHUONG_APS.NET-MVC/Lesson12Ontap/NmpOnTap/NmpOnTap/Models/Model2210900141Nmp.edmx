@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="nguyenminhphuong_ontapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Nmp_Account">
+          <Key>
+            <PropertyRef Name="Nmp_ID" />
+          </Key>
+          <Property Name="Nmp_ID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nmp_UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nmp_PassWord" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nmp_FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nmp_Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nmp_Phone" Type="int" />
+          <Property Name="Nmp_Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Nmp_Sach">
+          <Key>
+            <PropertyRef Name="Nmp_MaSach" />
+          </Key>
+          <Property Name="Nmp_MaSach" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nmp_TenSach" Type="nvarchar" MaxLength="150" />
+          <Property Name="Nmp_SoTrang" Type="int" />
+          <Property Name="Nmp_NamXB" Type="int" />
+          <Property Name="Nmp_MaTG" Type="nchar" MaxLength="10" />
+          <Property Name="Nmp_TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="NmpTacGia">
+          <Key>
+            <PropertyRef Name="Nmp_MaTG" />
+          </Key>
+          <Property Name="Nmp_MaTG" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nmp_TenTG" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_Nmp_Sach_NmpTacGia">
+          <End Role="NmpTacGia" Type="Self.NmpTacGia" Multiplicity="0..1" />
+          <End Role="Nmp_Sach" Type="Self.Nmp_Sach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NmpTacGia">
+              <PropertyRef Name="Nmp_MaTG" />
+            </Principal>
+            <Dependent Role="Nmp_Sach">
+              <PropertyRef Name="Nmp_MaTG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="nguyenminhphuong_ontapModelStoreContainer">
+          <EntitySet Name="Nmp_Account" EntityType="Self.Nmp_Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nmp_Sach" EntityType="Self.Nmp_Sach" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NmpTacGia" EntityType="Self.NmpTacGia" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Nmp_Sach_NmpTacGia" Association="Self.FK_Nmp_Sach_NmpTacGia">
+            <End Role="NmpTacGia" EntitySet="NmpTacGia" />
+            <End Role="Nmp_Sach" EntitySet="Nmp_Sach" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nguyenminhphuong_ontapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Nmp_Account">
+          <Key>
+            <PropertyRef Name="Nmp_ID" />
+          </Key>
+          <Property Name="Nmp_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nmp_UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nmp_PassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nmp_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nmp_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nmp_Phone" Type="Int32" />
+          <Property Name="Nmp_Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Nmp_Sach">
+          <Key>
+            <PropertyRef Name="Nmp_MaSach" />
+          </Key>
+          <Property Name="Nmp_MaSach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nmp_TenSach" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Nmp_SoTrang" Type="Int32" />
+          <Property Name="Nmp_NamXB" Type="Int32" />
+          <Property Name="Nmp_MaTG" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Nmp_TrangThai" Type="Boolean" />
+          <NavigationProperty Name="NmpTacGia" Relationship="Self.FK_Nmp_Sach_NmpTacGia" FromRole="Nmp_Sach" ToRole="NmpTacGia" />
+        </EntityType>
+        <EntityType Name="NmpTacGia">
+          <Key>
+            <PropertyRef Name="Nmp_MaTG" />
+          </Key>
+          <Property Name="Nmp_MaTG" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nmp_TenTG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Nmp_Sach" Relationship="Self.FK_Nmp_Sach_NmpTacGia" FromRole="NmpTacGia" ToRole="Nmp_Sach" />
+        </EntityType>
+        <Association Name="FK_Nmp_Sach_NmpTacGia">
+          <End Role="NmpTacGia" Type="Self.NmpTacGia" Multiplicity="0..1" />
+          <End Role="Nmp_Sach" Type="Self.Nmp_Sach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NmpTacGia">
+              <PropertyRef Name="Nmp_MaTG" />
+            </Principal>
+            <Dependent Role="Nmp_Sach">
+              <PropertyRef Name="Nmp_MaTG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NguyenMinhPhuongOnTapEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Nmp_Account" EntityType="Self.Nmp_Account" />
+          <EntitySet Name="Nmp_Sach" EntityType="Self.Nmp_Sach" />
+          <EntitySet Name="NmpTacGia" EntityType="Self.NmpTacGia" />
+          <AssociationSet Name="FK_Nmp_Sach_NmpTacGia" Association="Self.FK_Nmp_Sach_NmpTacGia">
+            <End Role="NmpTacGia" EntitySet="NmpTacGia" />
+            <End Role="Nmp_Sach" EntitySet="Nmp_Sach" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nguyenminhphuong_ontapModelStoreContainer" CdmEntityContainer="NguyenMinhPhuongOnTapEntities">
+          <EntitySetMapping Name="Nmp_Account">
+            <EntityTypeMapping TypeName="nguyenminhphuong_ontapModel.Nmp_Account">
+              <MappingFragment StoreEntitySet="Nmp_Account">
+                <ScalarProperty Name="Nmp_ID" ColumnName="Nmp_ID" />
+                <ScalarProperty Name="Nmp_UserName" ColumnName="Nmp_UserName" />
+                <ScalarProperty Name="Nmp_PassWord" ColumnName="Nmp_PassWord" />
+                <ScalarProperty Name="Nmp_FullName" ColumnName="Nmp_FullName" />
+                <ScalarProperty Name="Nmp_Email" ColumnName="Nmp_Email" />
+                <ScalarProperty Name="Nmp_Phone" ColumnName="Nmp_Phone" />
+                <ScalarProperty Name="Nmp_Active" ColumnName="Nmp_Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nmp_Sach">
+            <EntityTypeMapping TypeName="nguyenminhphuong_ontapModel.Nmp_Sach">
+              <MappingFragment StoreEntitySet="Nmp_Sach">
+                <ScalarProperty Name="Nmp_MaSach" ColumnName="Nmp_MaSach" />
+                <ScalarProperty Name="Nmp_TenSach" ColumnName="Nmp_TenSach" />
+                <ScalarProperty Name="Nmp_SoTrang" ColumnName="Nmp_SoTrang" />
+                <ScalarProperty Name="Nmp_NamXB" ColumnName="Nmp_NamXB" />
+                <ScalarProperty Name="Nmp_MaTG" ColumnName="Nmp_MaTG" />
+                <ScalarProperty Name="Nmp_TrangThai" ColumnName="Nmp_TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NmpTacGia">
+            <EntityTypeMapping TypeName="nguyenminhphuong_ontapModel.NmpTacGia">
+              <MappingFragment StoreEntitySet="NmpTacGia">
+                <ScalarProperty Name="Nmp_MaTG" ColumnName="Nmp_MaTG" />
+                <ScalarProperty Name="Nmp_TenTG" ColumnName="Nmp_TenTG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

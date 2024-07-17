@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nguyenminhphuong_ontapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Nmp_Account">
+    <Key>
+      <PropertyRef Name="Nmp_ID" />
+    </Key>
+    <Property Name="Nmp_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nmp_UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nmp_PassWord" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nmp_FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nmp_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nmp_Phone" Type="int" />
+    <Property Name="Nmp_Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Nmp_Sach">
+    <Key>
+      <PropertyRef Name="Nmp_MaSach" />
+    </Key>
+    <Property Name="Nmp_MaSach" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nmp_TenSach" Type="nvarchar" MaxLength="150" />
+    <Property Name="Nmp_SoTrang" Type="int" />
+    <Property Name="Nmp_NamXB" Type="int" />
+    <Property Name="Nmp_MaTG" Type="nchar" MaxLength="10" />
+    <Property Name="Nmp_TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="NmpTacGia">
+    <Key>
+      <PropertyRef Name="Nmp_MaTG" />
+    </Key>
+    <Property Name="Nmp_MaTG" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nmp_TenTG" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Nmp_Sach_NmpTacGia">
+    <End Role="NmpTacGia" Type="Self.NmpTacGia" Multiplicity="0..1" />
+    <End Role="Nmp_Sach" Type="Self.Nmp_Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NmpTacGia">
+        <PropertyRef Name="Nmp_MaTG" />
+      </Principal>
+      <Dependent Role="Nmp_Sach">
+        <PropertyRef Name="Nmp_MaTG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="nguyenminhphuong_ontapModelStoreContainer">
+    <EntitySet Name="Nmp_Account" EntityType="Self.Nmp_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nmp_Sach" EntityType="Self.Nmp_Sach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NmpTacGia" EntityType="Self.NmpTacGia" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Nmp_Sach_NmpTacGia" Association="Self.FK_Nmp_Sach_NmpTacGia">
+      <End Role="NmpTacGia" EntitySet="NmpTacGia" />
+      <End Role="Nmp_Sach" EntitySet="Nmp_Sach" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

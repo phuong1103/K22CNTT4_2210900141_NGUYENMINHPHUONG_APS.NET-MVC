@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nguyenminhphuong_ontapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Nmp_Account">
+    <Key>
+      <PropertyRef Name="Nmp_ID" />
+    </Key>
+    <Property Name="Nmp_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nmp_UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nmp_PassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nmp_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nmp_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nmp_Phone" Type="Int32" />
+    <Property Name="Nmp_Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Nmp_Sach">
+    <Key>
+      <PropertyRef Name="Nmp_MaSach" />
+    </Key>
+    <Property Name="Nmp_MaSach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nmp_TenSach" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Nmp_SoTrang" Type="Int32" />
+    <Property Name="Nmp_NamXB" Type="Int32" />
+    <Property Name="Nmp_MaTG" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Nmp_TrangThai" Type="Boolean" />
+    <NavigationProperty Name="NmpTacGia" Relationship="Self.FK_Nmp_Sach_NmpTacGia" FromRole="Nmp_Sach" ToRole="NmpTacGia" />
+  </EntityType>
+  <EntityType Name="NmpTacGia">
+    <Key>
+      <PropertyRef Name="Nmp_MaTG" />
+    </Key>
+    <Property Name="Nmp_MaTG" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nmp_TenTG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Nmp_Sach" Relationship="Self.FK_Nmp_Sach_NmpTacGia" FromRole="NmpTacGia" ToRole="Nmp_Sach" />
+  </EntityType>
+  <Association Name="FK_Nmp_Sach_NmpTacGia">
+    <End Role="NmpTacGia" Type="Self.NmpTacGia" Multiplicity="0..1" />
+    <End Role="Nmp_Sach" Type="Self.Nmp_Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NmpTacGia">
+        <PropertyRef Name="Nmp_MaTG" />
+      </Principal>
+      <Dependent Role="Nmp_Sach">
+        <PropertyRef Name="Nmp_MaTG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NguyenMinhPhuongOnTapEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Nmp_Account" EntityType="Self.Nmp_Account" />
+    <EntitySet Name="Nmp_Sach" EntityType="Self.Nmp_Sach" />
+    <EntitySet Name="NmpTacGia" EntityType="Self.NmpTacGia" />
+    <AssociationSet Name="FK_Nmp_Sach_NmpTacGia" Association="Self.FK_Nmp_Sach_NmpTacGia">
+      <End Role="NmpTacGia" EntitySet="NmpTacGia" />
+      <End Role="Nmp_Sach" EntitySet="Nmp_Sach" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

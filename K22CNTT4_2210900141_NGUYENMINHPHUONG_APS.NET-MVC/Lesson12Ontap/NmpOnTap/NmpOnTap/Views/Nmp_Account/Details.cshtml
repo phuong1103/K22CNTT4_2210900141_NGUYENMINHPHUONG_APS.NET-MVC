@@ -1,0 +1,67 @@
+﻿@model NmpOnTap.Models.Nmp_Account
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nmp_Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_PassWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_PassWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_Active)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Nmp_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

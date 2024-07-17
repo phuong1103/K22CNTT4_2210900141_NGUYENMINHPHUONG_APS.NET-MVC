@@ -1,0 +1,64 @@
+﻿@model IEnumerable<NmpOnTap.Models.Nmp_Account>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nmp_UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nmp_PassWord)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nmp_FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nmp_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nmp_Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nmp_Active)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nmp_UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nmp_PassWord)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nmp_FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nmp_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nmp_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nmp_Active)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Nmp_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Nmp_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Nmp_ID })
+        </td>
+    </tr>
+}
+
+</table>
