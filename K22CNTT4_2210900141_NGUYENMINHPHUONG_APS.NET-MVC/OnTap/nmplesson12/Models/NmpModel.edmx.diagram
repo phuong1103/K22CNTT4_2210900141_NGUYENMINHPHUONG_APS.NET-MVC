@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2a73de0d5b8c47eca78dbb18fe6e3584" Name="Diagram1">
+        <EntityTypeShape EntityType="NguyenMinhPhuong_2210900141Model.NMP_SACH" Width="1.5" PointX="4" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenMinhPhuong_2210900141Model.NMP_TACGIA" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="NguyenMinhPhuong_2210900141Model.FK_NMP_SACH_NMP_TACGIA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

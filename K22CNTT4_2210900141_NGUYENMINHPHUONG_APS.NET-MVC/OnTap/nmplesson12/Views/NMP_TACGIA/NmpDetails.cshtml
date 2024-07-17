@@ -1,0 +1,27 @@
+﻿@model nmplesson12.Models.NMP_TACGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>NMP_TACGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpTenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpTenTacGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "NmpEdit", new { id = Model.Nmp_MaTG }) |
+    @Html.ActionLink("Back to List", "NmpIndex")
+</p>

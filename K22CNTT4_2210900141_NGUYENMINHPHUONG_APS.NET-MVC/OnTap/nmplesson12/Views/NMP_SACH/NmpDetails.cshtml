@@ -1,0 +1,59 @@
+﻿@model nmplesson12.Models.NMP_SACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NMP_SACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_TenSach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_TenSach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_SoTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_SoTrang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_NamXB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_NamXB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nmp_TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nmp_TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NMP_TACGIA.NmpTenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NMP_TACGIA.NmpTenTacGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "NmpEdit", new { id = Model.Nmp_MaSach }) |
+    @Html.ActionLink("Back to List", "NmpIndex")
+</p>

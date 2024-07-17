@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NguyenMinhPhuong_2210900141Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NMP_SACH">
+    <Key>
+      <PropertyRef Name="Nmp_MaSach" />
+    </Key>
+    <Property Name="Nmp_MaSach" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nmp_TenSach" Type="nvarchar" MaxLength="150" />
+    <Property Name="Nmp_SoTrang" Type="int" />
+    <Property Name="Nmp_NamXB" Type="int" />
+    <Property Name="Nmp_MaTG" Type="nchar" MaxLength="10" />
+    <Property Name="Nmp_TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="NMP_TACGIA">
+    <Key>
+      <PropertyRef Name="Nmp_MaTG" />
+    </Key>
+    <Property Name="Nmp_MaTG" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NmpTenTacGia" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'NguyenMinhPhuong_2210900141.dbo.NmpAccount' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NmpAccount">
+          <Property Name="NmpID" Type="int" />
+          <Property Name="NmpUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NmpPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="NmpFullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NmpEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="NmpPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="NmpActive" Type="bit" />
+        </EntityType>-->
+  <Association Name="FK_NMP_SACH_NMP_TACGIA">
+    <End Role="NMP_TACGIA" Type="Self.NMP_TACGIA" Multiplicity="0..1" />
+    <End Role="NMP_SACH" Type="Self.NMP_SACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NMP_TACGIA">
+        <PropertyRef Name="Nmp_MaTG" />
+      </Principal>
+      <Dependent Role="NMP_SACH">
+        <PropertyRef Name="Nmp_MaTG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NguyenMinhPhuong_2210900141ModelStoreContainer">
+    <EntitySet Name="NMP_SACH" EntityType="Self.NMP_SACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NMP_TACGIA" EntityType="Self.NMP_TACGIA" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NMP_SACH_NMP_TACGIA" Association="Self.FK_NMP_SACH_NMP_TACGIA">
+      <End Role="NMP_TACGIA" EntitySet="NMP_TACGIA" />
+      <End Role="NMP_SACH" EntitySet="NMP_SACH" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,33 @@
+﻿@model nmplesson12.Models.NMP_TACGIA
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Xoá</h2>
+
+<h3>Bạn chắc chắn muốn xoá mục này ?</h3>
+<div>
+    <h4>NMP_TACGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmpTenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmpTenTacGia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "NmpIndex")
+        </div>
+    }
+</div>

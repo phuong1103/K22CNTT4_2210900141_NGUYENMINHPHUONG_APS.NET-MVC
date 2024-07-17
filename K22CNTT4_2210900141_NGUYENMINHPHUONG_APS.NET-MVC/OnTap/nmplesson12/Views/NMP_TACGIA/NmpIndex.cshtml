@@ -1,0 +1,35 @@
+﻿@model IEnumerable<nmplesson12.Models.NMP_TACGIA>
+
+@{
+    ViewBag.Title = "Tác giả";
+    Layout = "~/Views/Shared/_NmpLayout.cshtml";
+}
+
+<h2>Danh sách tác gải</h2>
+
+<p>
+    @*Html.ActionLink("Create New", "Create")*@
+</p>
+<a href="/NMP_TACGIA/NmpCreate">Thêm mới</a>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NmpTenTacGia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NmpTenTacGia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "NmpEdit", new { id=item.Nmp_MaTG }) |
+            @Html.ActionLink("Details", "NmpDetails", new { id=item.Nmp_MaTG }) |
+            @Html.ActionLink("Delete", "NmpDelete", new { id=item.Nmp_MaTG })
+        </td>
+    </tr>
+}
+
+</table>
